@@ -1,5 +1,6 @@
 import algorithms.AverageFinder;
 import algorithms.MinFinder;
+import algorithms.PrimeChecker;
 
 import java.util.Scanner;
 
@@ -10,6 +11,7 @@ public class Main {
         System.out.println("Which problem do you want to solve?");
         System.out.println("1. Find the minimum element");
         System.out.println("2. Find the average of the elements");
+        System.out.println("3. Check if a number is prime");
         System.out.print("Enter the problem number: ");
 
         int pNum = input.nextInt();
@@ -47,6 +49,18 @@ public class Main {
                 double avg = averageFinder.findAverage(arr2, n2);
 
                 System.out.println("Average number is: " + avg);
+                break;
+            case 3:
+                System.out.print("Enter a number: ");
+                int num = input.nextInt();
+
+                PrimeChecker primeChecker = new PrimeChecker();
+
+                if (primeChecker.isPrime(num, 2)){
+                    System.out.println(num + " is prime");
+                } else {
+                    System.out.println(num + " is composite");
+                }
                 break;
             default:
                 System.out.println("Invalid problem number");
