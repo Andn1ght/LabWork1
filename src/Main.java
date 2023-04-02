@@ -10,8 +10,8 @@ public class Main {
         System.out.println("1. Find the minimum element");
         System.out.println("2. Find the average of the elements");
         System.out.println("3. Check if a number is prime");
-        System.out.println("4. Find a factorial from number");
-        System.out.println("5. Find n-th element in Fibonacci sequence");
+        System.out.println("4. Find a factorial from the number");
+        System.out.println("5. Find a n-th element in Fibonacci sequence");
         System.out.println("6. Calculate the power of a number");
         System.out.println("7. Reverse the array");
         System.out.print("Enter the problem number: ");
