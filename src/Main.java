@@ -16,6 +16,7 @@ public class Main {
         System.out.println("7. Reverse the array");
         System.out.println("8. Check whether the string is all consists of digits");
         System.out.println("9. Find binomial coefficient C(n,k)");
+        System.out.println("10. Find GCD(a,b) of two numbers");
         System.out.print("Enter the problem number: ");
 
         String pNum = input.nextLine();
@@ -130,9 +131,9 @@ public class Main {
                 }
                 break;
             case "9":
-                System.out.print("Enter a 'n': ");
+                System.out.print("Enter 'n': ");
                 int Cn = input.nextInt();
-                System.out.print("Enter a 'k': ");
+                System.out.print("Enter 'k': ");
                 int Ck = input.nextInt();
 
                 BinomialCoefficientFinder binomial = new BinomialCoefficientFinder();
@@ -140,6 +141,18 @@ public class Main {
                 int result = binomial.binom(Cn, Ck);
 
                 System.out.println("Binomial coefficient of C(" + Cn + "," + Ck + ") is " + result);
+                break;
+            case "10":
+                System.out.print("Enter 'a': ");
+                int gcd_a = input.nextInt();
+                System.out.print("Enter 'b': ");
+                int gcd_b = input.nextInt();
+
+                GCDFinder gcdFinder = new GCDFinder();
+
+                int gcd_result = gcdFinder.GCD(gcd_a, gcd_b);
+
+                System.out.println("The GCD of " + gcd_a + " and " + gcd_b + " is " + gcd_result);
                 break;
             default:
                 System.out.println("Invalid problem number");
