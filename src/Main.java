@@ -14,13 +14,14 @@ public class Main {
         System.out.println("5. Find a n-th element in Fibonacci sequence");
         System.out.println("6. Calculate the power of a number");
         System.out.println("7. Reverse the array");
+        System.out.println("8. Check whether the string is all consists of digits");
         System.out.print("Enter the problem number: ");
 
-        int pNum = input.nextInt();
+        String pNum = input.nextLine();
 
         switch (pNum) {
 
-            case 1:
+            case "1":
                 System.out.print("Enter the number of elements: ");
                 int n = input.nextInt();
 
@@ -36,7 +37,7 @@ public class Main {
 
                 System.out.println("Minimum element is: " + min);
                 break;
-            case 2:
+            case "2":
                 System.out.print("Enter the number of elements: ");
                 int n2 = input.nextInt();
 
@@ -52,7 +53,7 @@ public class Main {
 
                 System.out.println("Average number is: " + avg);
                 break;
-            case 3:
+            case "3":
                 System.out.print("Enter a number: ");
                 int num = input.nextInt();
 
@@ -64,7 +65,7 @@ public class Main {
                     System.out.println(num + " is composite");
                 }
                 break;
-            case 4:
+            case "4":
                 System.out.print("Enter a number: ");
                 int fctNum = input.nextInt();
 
@@ -74,7 +75,7 @@ public class Main {
 
                 System.out.println("Factorial of " + fctNum + " is " + res);
                 break;
-            case 5:
+            case "5":
                 System.out.print("Enter a number: ");
                 int fibNum = input.nextInt();
 
@@ -84,7 +85,7 @@ public class Main {
 
                 System.out.println(fibNum + "-th element in Fibonacci sequence is " + res2);
                 break;
-            case 6:
+            case "6":
                 System.out.print("Enter a number that will be your base: ");
                 int a = input.nextInt();
                 System.out.print("Enter a number that will be your power of a number: ");
@@ -96,7 +97,7 @@ public class Main {
 
                 System.out.println(a + " to the power of " + pow + " is: " + res3);
                 break;
-            case 7:
+            case "7":
                 System.out.print("Enter the number of elements: ");
                 int n3 = input.nextInt();
 
@@ -113,6 +114,19 @@ public class Main {
                 System.out.print("Reversed array is: ");
                 for (int i = 0; i < n3; i++) {
                     System.out.print(arr3[i] + " ");
+                }
+                break;
+            case "8":
+                System.out.print("Print your string: ");
+                String str = input.nextLine();
+
+
+                DigitChecker dgt = new DigitChecker();
+
+                if(dgt.isDigit(str)){
+                    System.out.println("Yes");
+                } else {
+                    System.out.println("No");
                 }
                 break;
             default:
