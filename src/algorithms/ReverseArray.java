@@ -1,14 +1,14 @@
 package algorithms;
 
 public class ReverseArray {
-    public void reverse(int[] arr, int a, int n){
+    public void reverse(int[] arr, int first, int last){
 
-        if (a >= n) return;
+        if (first >= last) return;
 
-        int temp = arr[a];
-        arr[a] = arr[n];
-        arr[n] = temp;
-        reverse(arr, a+1, n-1);
+        int temp = arr[first];
+        arr[first] = arr[last];
+        arr[last] = temp;
+        reverse(arr, first+1, last-1);
 
     }
 }
