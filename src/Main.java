@@ -13,6 +13,7 @@ public class Main {
         System.out.println("4. Find a factorial from number");
         System.out.println("5. Find n-th element in Fibonacci sequence");
         System.out.println("6. Calculate the power of a number");
+        System.out.println("7. Reverse the array");
         System.out.print("Enter the problem number: ");
 
         int pNum = input.nextInt();
@@ -94,6 +95,25 @@ public class Main {
                 int res3 = exponent.exp(a, pow);
 
                 System.out.println(a + " to the power of " + pow + " is: " + res3);
+                break;
+            case 7:
+                System.out.print("Enter the number of elements: ");
+                int n3 = input.nextInt();
+
+                int[] arr3 = new int[n3];
+
+                for (int i = 0; i < n3; i++) {
+                    System.out.print("Enter element " + (i + 1) + ": ");
+                    arr3[i] = input.nextInt();
+                }
+
+                ReverseArray rvs = new ReverseArray();
+                rvs.reverse(arr3, 0, n3-1);
+
+                System.out.print("Reversed array is: ");
+                for (int i = 0; i < n3; i++) {
+                    System.out.print(arr3[i] + " ");
+                }
                 break;
             default:
                 System.out.println("Invalid problem number");
