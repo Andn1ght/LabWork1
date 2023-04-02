@@ -73,6 +73,7 @@ public class Main {
                 int result = fact.fct(num2);
 
                 System.out.println("Factorial of " + num2 + " is " + result);
+                break;
             default:
                 System.out.println("Invalid problem number");
         }
