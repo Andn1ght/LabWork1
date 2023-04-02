@@ -7,6 +7,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Which problem do you want to solve?");
+        System.out.println("---------------------------------------------");
         System.out.println("1. Find the minimum element");
         System.out.println("2. Find the average of the elements");
         System.out.println("3. Check if a number is prime");
@@ -17,6 +18,7 @@ public class Main {
         System.out.println("8. Check whether the string is all consists of digits");
         System.out.println("9. Find binomial coefficient C(n,k)");
         System.out.println("10. Find GCD(a,b) of two numbers");
+        System.out.println("---------------------------------------------");
         System.out.print("Enter the problem number: ");
 
         String pNum = input.nextLine();
