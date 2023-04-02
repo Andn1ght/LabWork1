@@ -12,6 +12,7 @@ public class Main {
         System.out.println("3. Check if a number is prime");
         System.out.println("4. Find a factorial from number");
         System.out.println("5. Find n-th element in Fibonacci sequence");
+        System.out.println("6. Calculate the power of a number");
         System.out.print("Enter the problem number: ");
 
         int pNum = input.nextInt();
@@ -64,23 +65,35 @@ public class Main {
                 break;
             case 4:
                 System.out.print("Enter a number: ");
-                int num2 = input.nextInt();
+                int fctNum = input.nextInt();
 
                 FactCalc fact = new FactCalc();
 
-                int res = fact.fct(num2);
+                int res = fact.fct(fctNum);
 
-                System.out.println("Factorial of " + num2 + " is " + res);
+                System.out.println("Factorial of " + fctNum + " is " + res);
                 break;
             case 5:
                 System.out.print("Enter a number: ");
-                int num3 = input.nextInt();
+                int fibNum = input.nextInt();
 
                 FibonacciSeq fibo = new FibonacciSeq();
 
-                int res2 = fibo.fib(num3);
+                int res2 = fibo.fib(fibNum);
 
-                System.out.println(num3 + "-th element in Fibonacci sequence is " + res2);
+                System.out.println(fibNum + "-th element in Fibonacci sequence is " + res2);
+                break;
+            case 6:
+                System.out.print("Enter a number that will be your base: ");
+                int a = input.nextInt();
+                System.out.print("Enter a number that will be your power of a number: ");
+                int pow = input.nextInt();
+
+                ExponentFinder exponent = new ExponentFinder();
+
+                int res3 = exponent.exp(a, pow);
+
+                System.out.println(a + " to the power of " + pow + " is: " + res3);
                 break;
             default:
                 System.out.println("Invalid problem number");
