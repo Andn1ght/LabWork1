@@ -1,7 +1,4 @@
-import algorithms.AverageFinder;
-import algorithms.FactCalc;
-import algorithms.MinFinder;
-import algorithms.PrimeChecker;
+import algorithms.*;
 
 import java.util.Scanner;
 
@@ -14,6 +11,7 @@ public class Main {
         System.out.println("2. Find the average of the elements");
         System.out.println("3. Check if a number is prime");
         System.out.println("4. Find a factorial from number");
+        System.out.println("5. Find n-th element in Fibonacci sequence");
         System.out.print("Enter the problem number: ");
 
         int pNum = input.nextInt();
@@ -70,9 +68,19 @@ public class Main {
 
                 FactCalc fact = new FactCalc();
 
-                int result = fact.fct(num2);
+                int res = fact.fct(num2);
 
-                System.out.println("Factorial of " + num2 + " is " + result);
+                System.out.println("Factorial of " + num2 + " is " + res);
+                break;
+            case 5:
+                System.out.print("Enter a number: ");
+                int num3 = input.nextInt();
+
+                FibonacciSeq fibo = new FibonacciSeq();
+
+                int res2 = fibo.fib(num3);
+
+                System.out.println(num3 + "-th element in Fibonacci sequence is " + res2);
                 break;
             default:
                 System.out.println("Invalid problem number");
