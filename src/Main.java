@@ -1,4 +1,5 @@
 import algorithms.AverageFinder;
+import algorithms.FactCalc;
 import algorithms.MinFinder;
 import algorithms.PrimeChecker;
 
@@ -12,6 +13,7 @@ public class Main {
         System.out.println("1. Find the minimum element");
         System.out.println("2. Find the average of the elements");
         System.out.println("3. Check if a number is prime");
+        System.out.println("4. Find a factorial from number");
         System.out.print("Enter the problem number: ");
 
         int pNum = input.nextInt();
@@ -62,6 +64,15 @@ public class Main {
                     System.out.println(num + " is composite");
                 }
                 break;
+            case 4:
+                System.out.print("Enter a number: ");
+                int num2 = input.nextInt();
+
+                FactCalc fact = new FactCalc();
+
+                int result = fact.fct(num2);
+
+                System.out.println("Factorial of " + num2 + " is " + result);
             default:
                 System.out.println("Invalid problem number");
         }
