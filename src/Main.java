@@ -15,6 +15,7 @@ public class Main {
         System.out.println("6. Calculate the power of a number");
         System.out.println("7. Reverse the array");
         System.out.println("8. Check whether the string is all consists of digits");
+        System.out.println("9. Find binomial coefficient C(n,k)");
         System.out.print("Enter the problem number: ");
 
         String pNum = input.nextLine();
@@ -120,7 +121,6 @@ public class Main {
                 System.out.print("Print your string: ");
                 String str = input.nextLine();
 
-
                 DigitChecker dgt = new DigitChecker();
 
                 if(dgt.isDigit(str)){
@@ -128,6 +128,18 @@ public class Main {
                 } else {
                     System.out.println("No");
                 }
+                break;
+            case "9":
+                System.out.print("Enter a 'n': ");
+                int Cn = input.nextInt();
+                System.out.print("Enter a 'k': ");
+                int Ck = input.nextInt();
+
+                BinomialCoefficientFinder binomial = new BinomialCoefficientFinder();
+
+                int result = binomial.binom(Cn, Ck);
+
+                System.out.println("Binomial coefficient of C(" + Cn + "," + Ck + ") is " + result);
                 break;
             default:
                 System.out.println("Invalid problem number");
