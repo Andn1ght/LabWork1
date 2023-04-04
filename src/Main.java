@@ -6,6 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
+        // PRINT MENU OPTIONS IN CONSOLE
         System.out.println("Which problem do you want to solve?");
         System.out.println("---------------------------------------------");
         System.out.println("1. Find the minimum element");
@@ -21,11 +22,14 @@ public class Main {
         System.out.println("---------------------------------------------");
         System.out.print("Enter the problem number: ");
 
+        // READ USER INPUT TO SELECT THE OPTION
         String pNum = input.nextLine();
 
+        // USE A SWITCH STATEMENT TO CALL THE APPROPRIATE ALGORITHM BASED ON THE USER INPUT
         switch (pNum) {
 
             case "1":
+                // FIND THE MINIMUM ELEMENT
                 System.out.print("Enter the number of elements: ");
                 int n = input.nextInt();
 
@@ -42,6 +46,7 @@ public class Main {
                 System.out.println("Minimum element is: " + min);
                 break;
             case "2":
+                // FIND THE AVERAGE OF THE ELEMENTS
                 System.out.print("Enter the number of elements: ");
                 int n2 = input.nextInt();
 
@@ -58,6 +63,7 @@ public class Main {
                 System.out.println("Average number is: " + avg);
                 break;
             case "3":
+                // CHECK IF A NUMBER IS PRIME
                 System.out.print("Enter a number: ");
                 int num = input.nextInt();
 
@@ -70,26 +76,29 @@ public class Main {
                 }
                 break;
             case "4":
+                // FIND A FACTORIAL FROM THE NUMBER
                 System.out.print("Enter a number: ");
                 int fctNum = input.nextInt();
 
                 FactCalc fact = new FactCalc();
 
-                int res = fact.fct(fctNum);
+                int res = fact.findFct(fctNum);
 
                 System.out.println("Factorial of " + fctNum + " is " + res);
                 break;
             case "5":
+                // FIND A N-TH ELEMENT IN FIBONACCI SEQUENCE
                 System.out.print("Enter a number: ");
                 int fibNum = input.nextInt();
 
                 FibonacciSeq fibo = new FibonacciSeq();
 
-                int res2 = fibo.fib(fibNum);
+                int res2 = fibo.findFib(fibNum);
 
                 System.out.println(fibNum + "-th element in Fibonacci sequence is " + res2);
                 break;
             case "6":
+                // FIND A RESULT OF A POWER OF THE NUMBER
                 System.out.print("Enter a number that will be your base: ");
                 int a = input.nextInt();
                 System.out.print("Enter a number that will be your power of a number: ");
@@ -97,11 +106,12 @@ public class Main {
 
                 ExponentFinder exponent = new ExponentFinder();
 
-                int res3 = exponent.exp(a, pow);
+                int res3 = exponent.findExp(a, pow);
 
                 System.out.println(a + " to the power of " + pow + " is: " + res3);
                 break;
             case "7":
+                // REVERSE ARRAY
                 System.out.print("Enter the number of elements: ");
                 int n3 = input.nextInt();
 
@@ -113,7 +123,7 @@ public class Main {
                 }
 
                 ReverseArray rvs = new ReverseArray();
-                rvs.reverse(arr3, 0, n3-1);
+                rvs.reverseArr(arr3, 0, n3-1);
 
                 System.out.print("Reversed array is: ");
                 for (int i = 0; i < n3; i++) {
@@ -121,6 +131,7 @@ public class Main {
                 }
                 break;
             case "8":
+                // CHECKING IF A STRING CONSISTS ALL OF DIGITS
                 System.out.print("Print your string: ");
                 String str = input.nextLine();
 
@@ -133,6 +144,7 @@ public class Main {
                 }
                 break;
             case "9":
+                // FIND THE BINOMIAL COEFFICIENT FROM N TO K
                 System.out.print("Enter 'n': ");
                 int Cn = input.nextInt();
                 System.out.print("Enter 'k': ");
@@ -140,11 +152,12 @@ public class Main {
 
                 BinomialCoefficientFinder binomial = new BinomialCoefficientFinder();
 
-                int result = binomial.binom(Cn, Ck);
+                int result = binomial.findBinomCoeff(Cn, Ck);
 
                 System.out.println("Binomial coefficient of C(" + Cn + "," + Ck + ") is " + result);
                 break;
             case "10":
+                // FIND GCD (GREAT COMMON DIVISOR) FOR TWO NUMBERS
                 System.out.print("Enter 'a': ");
                 int gcd_a = input.nextInt();
                 System.out.print("Enter 'b': ");
@@ -152,7 +165,7 @@ public class Main {
 
                 GCDFinder gcdFinder = new GCDFinder();
 
-                int gcd_result = gcdFinder.GCD(gcd_a, gcd_b);
+                int gcd_result = gcdFinder.findGCD(gcd_a, gcd_b);
 
                 System.out.println("The GCD of " + gcd_a + " and " + gcd_b + " is " + gcd_result);
                 break;

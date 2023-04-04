@@ -1,11 +1,21 @@
 package algorithms;
 
 public class FibonacciSeq {
-    public int fib(int n){
 
-        if (n <= 1) return n;
+    /**
+     * Computes the n-th number in the Fibonacci sequence.
+     *
+     * @param n the index of the number to compute in the sequence
+     * @return the n-th number in the Fibonacci sequence
+     */
+    public int findFib(int n){
 
-        return fib(n-1) + fib(n-2);
-
+        // Base case: if n is 0 or 1, the result is n
+        if (n <= 1) {
+            return n;
+        } else {
+            // Recursive case: Compute findFib(n-1) + findFib(n-2)
+            return findFib(n-1) + findFib(n-2);
+        }
     }
 }

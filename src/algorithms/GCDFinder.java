@@ -1,12 +1,22 @@
 package algorithms;
 
 public class GCDFinder {
-    public int GCD(int a, int b) {
 
-        if (b == 0)
+    /**
+     * Computes the greatest common divisor (GCD) of two integers a and b.
+     *
+     * @param a the first integer
+     * @param b the second integer
+     * @return the GCD of a and b
+     */
+    public int findGCD(int a, int b) {
+
+        // Base case: if b is 0, the GCD is a
+        if (b == 0) {
             return a;
-        else
-            return GCD(b, a % b);
-
+        } else {
+            // Recursive case: Compute GCD(b, a % b)
+            return findGCD(b, a % b);
+        }
     }
 }
